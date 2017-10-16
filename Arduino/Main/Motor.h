@@ -10,6 +10,8 @@
 #define STOP 0
 #define BACKWARD -1
 
+#define STEP 5
+
 class Motor
 {
   private:
@@ -23,6 +25,7 @@ class Motor
     void setup_motor();
     void set_direction_forward();
     void set_direction_backward();
+    int verify_power(int power);
     
   public:
     Motor(int direction_pin, int speed_pin, int brake_pin);
